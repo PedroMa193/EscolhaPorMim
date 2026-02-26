@@ -43,7 +43,7 @@ function App() {
         <Button text="escolher" width="200" onClick={handleChoice}/>
         { resp &&
         <div className="border-solid border-4 w-[100%] border-ocean-dark p-4 rounded-xl flex flex-row items-center justify-center gap-2 text-center">
-          <h1 className="text-ocean-dark font-bold text-xl">{curCharacter} Escolheu: </h1>
+          <h1 className="text-ocean-dark font-bold text-xl">{curCharacter}Escolhido: </h1>
           <h1 className="text-ocean-dark font-extrabold text-xl uppercase">{resp}</h1>
         </div>
         }
