@@ -24,14 +24,15 @@ function App() {
   return (
     <div className="w-screen flex flex-col items-center justify-center">
       <div className="flex flex-col h-screen justify-center w-[40%] items-center p-4 gap-5">
+        <img src="dancing-gir.gif" alt='' width="200px"/>
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-ocean-dark font-extrabold text-3xl capitalize"> Escolha Por Mim!</h1>
           <h6>coloque a baixo as opções</h6>
         </div>
         <div className="flex flex-row gap-4 items-center mt-10">
-          <Input placeholder="Valor 1" onChange={handleChangeVal1} value={val1}/>
+          <Input placeholder="Opção 1" onChange={handleChangeVal1} value={val1}/>
           <span className="text-xl font-bold text-ocean-dark">ou</span>
-          <Input placeholder="Valor 2" onChange={handleChangeVal2} value={val2}/>
+          <Input placeholder="Opção 2" onChange={handleChangeVal2} value={val2}/>
         </div>
         <Button text="escolher" width="200" onClick={handleChoice}/>
         { resp &&
