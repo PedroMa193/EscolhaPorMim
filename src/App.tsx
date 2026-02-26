@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "./components/button"
 import Input from "./components/input"
 
@@ -6,8 +6,14 @@ function App() {
   const [resp, setResp] = useState("");
   const [val1, setVal1] = useState("");
   const [val2, setVal2] = useState("");
+  const [curCharacter, setCurCharacter] = useState("");
   const res = [val1, val2];
+  let characters = ["Zim", "Gir"];
 
+  useEffect(() => {
+    setCurCharacter(characters[Math.floor(Math.random() * ((characters.length) - 0) + 0)]);
+  }, [])
+  
   const handleChangeVal1 = (e:any) => {
     setVal1(e.target.value);
   }
@@ -24,9 +30,9 @@ function App() {
   return (
     <div className="w-screen flex flex-col items-center justify-center">
       <div className="flex flex-col h-screen justify-center w-[40%] items-center p-4 gap-5">
-        <img src="dancing-gir.gif" alt='' width="200px"/>
+        <img src={`${curCharacter}.gif`} alt='' width="200px" className="mb-2"/>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-ocean-dark font-extrabold text-3xl capitalize"> Escolha Por Mim!</h1>
+          <h1 className="text-ocean-dark font-extrabold text-3xl capitalize">{curCharacter} Escolha Por Mim!</h1>
           <h6>coloque a baixo as opções</h6>
         </div>
         <div className="flex flex-row gap-4 items-center mt-10">
@@ -37,7 +43,7 @@ function App() {
         <Button text="escolher" width="200" onClick={handleChoice}/>
         { resp &&
         <div className="border-solid border-4 w-[100%] border-ocean-dark p-4 rounded-xl flex flex-row items-center justify-center gap-2 text-center">
-          <h1 className="text-ocean-dark font-bold text-xl">Escolhido: </h1>
+          <h1 className="text-ocean-dark font-bold text-xl">{curCharacter} Escolheu: </h1>
           <h1 className="text-ocean-dark font-extrabold text-xl uppercase">{resp}</h1>
         </div>
         }
