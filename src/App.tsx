@@ -70,20 +70,20 @@ function App() {
         <source src={`/audios/${curMusic}.wav`} type="audio/wav"/>
       </audio>
       
-      <button onClick={() => {playAudio(), toggleMute()}} className="absolute top-1 left-2 cursor-pointer p-2 opacity-70 hover:opacity-100 transition duration-300 ease-in-out">
+      <button onClick={() => {playAudio(), toggleMute()}} className="fixed top-2 left-2 sm:top-4 sm:left-4 cursor-pointer p-2 opacity-70 hover:opacity-100 transition duration-300 ease-in-out">
         {isMuted ? 
           <VolumeMuteFill size={32} className="text-ocean-dark"/> : 
           <VolumeUpFill size={32} className="text-ocean-dark"/>
         }
       </button>
 
-      <div className="flex flex-col h-screen justify-center w-[40%] items-center p-4 gap-5">
-        <img src={`${curCharacter}.gif`} alt='' width="200px" className="mb-2 select-none"/>
+      <div className="flex flex-col min-h-screen justify-center items-center p-4 gap-5 w-full sm:w-[90%] md:w-[70%] lg:w-[50%] xl:w-[40%]">
+        <img src={`${curCharacter}.gif`} alt='' className=" mt-5 w-[120px] sm:w-[160px] md:w-[200px] mb-2 select-none"/>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-ocean-dark font-extrabold text-3xl capitalize">{curCharacter} Escolha Por Mim!</h1>
+          <h1 className="text-ocean-dark font-extrabold text-xl sm:text-2xl md:text-3xl capitalize text-center">{curCharacter} Escolha Por Mim!</h1>
           <h6>coloque a baixo as opções</h6>
         </div>
-        <div className="flex flex-row gap-4 items-center mt-10">
+        <div className="flex flex-col sm:flex-row gap-4 items-center mt-6 w-full">
           <Input placeholder="Opção 1" onChange={handleChangeVal1} value={val1}/>
           <span className="text-xl font-bold text-ocean-dark">ou</span>
           <Input placeholder="Opção 2" onChange={handleChangeVal2} value={val2}/>
@@ -91,7 +91,7 @@ function App() {
         <Button text="escolher" width="200" onClick={handleChoice}/>
         <div className="p-4 flex justify-center items-center w-[100%]">
           { resp &&
-          <div className="border-solid border-4 w-[100%] border-ocean-dark p-4 rounded-xl flex flex-row items-center justify-center gap-2 text-center">
+          <div className="border-solid border-4 w-full max-w-xl border-ocean-dark p-4 rounded-xl flex flex-row items-center justify-center gap-2 text-center">
             <h1 className="text-ocean-dark font-bold text-xl">{curCharacter} Escolheu: </h1>
             <h1 className="text-ocean-dark font-extrabold text-xl uppercase">{resp}</h1>
           </div>
