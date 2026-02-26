@@ -78,7 +78,7 @@ function App() {
       </button>
 
       <div className="flex flex-col min-h-screen justify-center items-center p-4 gap-5 w-full sm:w-[90%] md:w-[70%] lg:w-[50%] xl:w-[40%]">
-        <img src={`${curCharacter}.gif`} alt='' className=" mt-5 w-[120px] sm:w-[160px] md:w-[200px] mb-2 select-none"/>
+        <img src={`${curCharacter}.gif`} alt='' className="w-[120px] sm:w-[160px] md:w-[200px] mb-2 select-none"/>
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-ocean-dark font-extrabold text-xl sm:text-2xl md:text-3xl capitalize text-center">{curCharacter} Escolha Por Mim!</h1>
           <h6>coloque a baixo as opções</h6>
