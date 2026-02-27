@@ -83,7 +83,7 @@ function App() {
           <h1 className="text-ocean-dark font-extrabold text-xl sm:text-2xl md:text-3xl capitalize text-center">{curCharacter} Escolha Por Mim!</h1>
           <h6>coloque a baixo as opções</h6>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 items-center mt-6 w-full">
+        <div className="flex flex-col sm:flex-row gap-4 items-center mt-6 w-full justify-center">
           <Input placeholder="Opção 1" onChange={handleChangeVal1} value={val1}/>
           <span className="text-xl font-bold text-ocean-dark">ou</span>
           <Input placeholder="Opção 2" onChange={handleChangeVal2} value={val2}/>
