@@ -98,7 +98,7 @@ function App() {
           }
         </div>
 
-        <div className="w-screen flex flex-col items-center justify-center absolute bottom-0">
+        <div className="w-screen flex flex-col items-center justify-center">
           <span>criado por <a href="https://github.com/pedroma193" target="_blank" rel="noopener noreferrer" className="underline text-ocean-dark cursor-pointer">Pedro</a></span>
         </div>
       </div>
